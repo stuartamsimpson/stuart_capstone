@@ -1,14 +1,18 @@
 Stuart’s Udacity Capstone Project
 
-This project is the final piece of work in the Udacity Full Stack Web Developer Nanodegree.  
+This project is the final piece of work in the Udacity Full Stack Web Developer Nanodegree.
+
 The App and API is a Casting Agency which allows users to view/add/modify/delete Actors amd Movies as well as assigning Actors to Movies.
+The application has a front end based on the Fyyer project.
+The application is deployed on Heroku and can be accessed via https://stuart-capstone.herokuapp.com
+
 All backend code follows PEP8 style guide.
 
 Getting Started
 Pre-requisites and Local Development
 Developers using this project should already have Python and PIP installed on their local machines.
 
-From the root folder run:
+To set up the configuration variables and to run 'requirements.txt', from the root folder run:
 source setup.sh
 
 To run the application run the following command:
@@ -25,6 +29,8 @@ python test_app.py
 The first time you run the tests, omit the dropdb command.
 All tests are kept in test_app.py and should be maintained as updates are made to app functionality
 
+Errors
+
 Error Handling
 Errors are returned as JSON objects in the following format:
 
@@ -40,6 +46,19 @@ The API will return the following error types when requests fail:
 405: Method Not Allowed
 422: Not Processable
 500: Internal Service Error
+
+Roles/Users
+
+Two roles have been setup in Auth0.
+Casting assistant - which can only view movies and actors
+User: stuartudacitycast@mail2uk.com
+Password: stuartCASTcapstone1!
+
+Executive Producer - which can do anything
+User: stuartudacityexec@mail.com
+Password: stuartEXECcapstone1!
+
+API Endpoints
 
 GET /login
 The user is redirected to the Auth0 login page where they can login to the app
