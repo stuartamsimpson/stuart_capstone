@@ -1,0 +1,23 @@
+{% extends 'layouts/main.html' %}
+{% block title %}{{ movie.movie_name }} | Movie{% endblock %}
+{% block content %}
+<div class="row">
+	<div class="col-sm-6">
+		<h1 class="monospace">
+			{{ movie.name }}
+		</h1>
+		<a href="/movies/{{movie.movie_id}}/edit"><button class="btn btn-primary btn-lg">Edit this movie</button></a>
+		<a href="/movies/{{movie.movie_id}}/delete"><button class="btn btn-primary btn-lg">Delete this movie</button></a>
+		<p class="subtitle">
+			ID: {{ movie.movie_id }}
+		</p>
+		<p class="subtitle">
+			Name: {{ movie.movie_name }}
+		</p>
+		<p class="subtitle">
+			Release Date: {{ movie.release_date }}
+		</p>
+	</div>
+</div>
+{% endblock %}
+

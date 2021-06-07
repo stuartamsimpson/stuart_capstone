@@ -1,0 +1,22 @@
+{% extends 'layouts/main.html' %}
+{% block title %}Edit Actor{% endblock %}
+{% block content %}
+  <div class="form-wrapper">
+    <form class="form" method="post">
+      <h3 class="form-heading">Edit actor <em>{{ actor.actor_name }}</em></h3>
+      <div class="form-group">
+        <label for="name">Name</label>
+        {{ form.actor_name(class_ = 'form-control', autofocus = true) }}
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        {{ form.age(class_ = 'form-control', autofocus = true) }}
+      </div>
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      {{ form.gender(class_ = 'form-control', placeholder='Gender, separated by commas', autofocus = true) }}
+    </div>
+      <input type="submit" value="Edit Actor" class="btn btn-primary btn-lg btn-block">
+    </form>
+  </div>
+{% endblock %}

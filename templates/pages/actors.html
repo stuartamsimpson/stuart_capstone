@@ -1,0 +1,22 @@
+{% extends 'layouts/main.html' %}
+{% block title %}Stuart's Casting Agency | Actors{% endblock %}
+{% block content %}
+<ul class="items">
+	{% for actor in actors %}
+	<li>
+		<a href="/actors/{{ actor.id }}">
+			<i class="fas fa-users"></i>
+			<div class="item">
+				<h5>{{ actor.actor_name }}</h5>
+			</div>
+			<div class="item">
+				<h5>{{ actor.age }}</h5>
+			</div>
+			<div class="item">
+				<h5>{{ actor.gender }}</h5>
+			</div>
+		</a>
+	</li>
+	{% endfor %}
+</ul>
+{% endblock %}

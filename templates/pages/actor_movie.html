@@ -1,0 +1,15 @@
+{% extends 'layouts/main.html' %}
+{% block title %}Actors and Movies{% endblock %}
+{% block content %}
+<div class="row shows">
+    {%for a_m in actor_movies %}
+    <div class="col-sm-4">
+        <div class="tile tile-show">
+            <h5><a href="/actors/{{ a_m.actor_id }}">{{ a_m.actor_name }}</a></h5>
+            <p>playing at</p>
+            <h5><a href="/movies/{{ a_m.movie_id }}">{{ a_m.movie_name }}</a></h5>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
